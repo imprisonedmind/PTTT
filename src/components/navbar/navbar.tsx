@@ -8,22 +8,23 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { NavbarItem } from "@/components/navbar/navbarItem";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="sticky top-0 flex items-center justify-between w-full p-4 bg-white drop-shadow z-[500]">
-      <h1 className="font-bold text-3xl">PTT</h1>
+      <h1 className="font-bold text-3xl min-w-[110px]">PTT</h1>
 
       <ul className="hidden md:flex flex-row gap-4">
-        <li>Features</li>
-        <li>Meet your Coaches</li>
-        <li>Pricing</li>
+        <NavbarItem title={"Features"} href="#features" />
+        <NavbarItem title={"Meet your coaches"} href="#coaches" />
+        <NavbarItem title={"Pricing"} href="#pricing" />
       </ul>
 
-      <div className="hidden md:flex flex-row gap-4">
-        <Button variant="secondary">Contact</Button>
+      <div className="hidden md:flex flex-row gap-4 min-w-[110px]">
+        {/*<Button variant="secondary">Contact</Button>*/}
         <Button variant="default">Get Started</Button>
       </div>
 
@@ -53,13 +54,13 @@ export default function Navbar() {
             </li>
           </ul>
           <div className="flex flex-col gap-4">
-            <Button
-              variant="secondary"
-              className="w-full"
-              onClick={() => setOpen(false)}
-            >
-              Contact
-            </Button>
+            {/*<Button*/}
+            {/*  variant="secondary"*/}
+            {/*  className="w-full"*/}
+            {/*  onClick={() => setOpen(false)}*/}
+            {/*>*/}
+            {/*  Contact*/}
+            {/*</Button>*/}
             <Button
               variant="default"
               className="w-full"

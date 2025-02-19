@@ -8,7 +8,7 @@ import { MainWrapper } from "@/components/wrapper/mainWrapper";
 
 export default function Features() {
   return (
-    <MainWrapper>
+    <MainWrapper id={"features"}>
       {/*<div className="flex flex-col items-center justify-center space-y-4 text-center">*/}
       {/*	<h1*/}
       {/*		className="text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl/none">Features</h1>*/}

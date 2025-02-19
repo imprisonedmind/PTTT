@@ -7,10 +7,11 @@ import { SectionHeader } from "@/components/reusable/sectionHeader";
 import Image, { StaticImageData } from "next/image";
 import kath from "../../../public/kath.avif";
 import jax from "../../../public/jax.avif";
+import { MainWrapper } from "@/components/wrapper/mainWrapper";
 
 export default function MeetYourCoaches() {
   return (
-    <section className="text-gray-600 body-font">
+    <MainWrapper className="text-gray-600 body-font" id="coaches">
       <div className="container px-5 py-24 mx-auto">
         {/* Section Header */}
         <SectionHeader
@@ -33,7 +34,7 @@ export default function MeetYourCoaches() {
           />
         </div>
       </div>
-    </section>
+    </MainWrapper>
   );
 }
 
