@@ -16,7 +16,7 @@ export default function Features() {
 					className="text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl/none">Features</h1>
 				<p
 					className="mx-auto max-w-[700px] md:text-xl ">
-					What you'll get with us
+					What you&#39;ll get with us
 				</p>
 			</div>
 
