@@ -21,7 +21,10 @@ export default function HeroMain() {
           </Button>
         </Link>
 
-        <Link href={"https://paystack.com/pay/nuwmul4t7o"} target={"_blank"}>
+        <Link
+          href={"https://parenting-the-teen-tribe.mn.co/"}
+          target={"_blank"}
+        >
           <Button variant={"ghost"} size={"lg"}>
             View the Network
           </Button>
