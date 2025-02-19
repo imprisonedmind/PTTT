@@ -6,7 +6,7 @@ import HeroMain from "@/components/hero/heroMain";
 
 export default function Hero() {
   return (
-    <MainWrapper className="bg-[url(/boys.jpg)] bg-cover bg-center relative bg-zinc-50">
+    <MainWrapper className="bg-[url(/boys.jpg)] bg-cover bg-center bg-no-repeat relative bg-zinc-50">
       <HeroOverlay />
 
       <div className="flex items-center w-full text-center md:text-start text-white py-16 overflow-clip md:h-[700px] ">
