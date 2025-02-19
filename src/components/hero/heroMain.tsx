@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export default function HeroMain() {
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex-col flex gap-2">
+      <div className="flex-col flex gap-2 max-w-[650px]">
         <h2 className="font-bold text-5xl">Parenting The Teen Tribe</h2>
 
         <p className="text-2xl">
