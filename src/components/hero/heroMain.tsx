@@ -8,9 +8,8 @@ export default function HeroMain() {
         <h2 className="font-bold text-5xl">Parenting The Teen Tribe</h2>
 
         <p className="text-2xl">
-          Join our supportive network to navigate the transitional
-          <br />
-          years of parenting tweens and teens together.
+          Join our supportive network to navigate the transitional years of
+          parenting tweens and teens together.
         </p>
       </div>
 

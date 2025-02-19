@@ -10,7 +10,7 @@ export default function Hero() {
       <HeroOverlay />
 
       <div className="flex items-center w-full text-center md:text-start text-white py-16 overflow-clip md:h-[700px] ">
-        <div className="h-full justify-between flex flex-col gap-8 z-50 px-8 md:px-32 2xl:px-0">
+        <div className="h-full justify-between flex flex-col gap-8 z-50 px-3 md:px-8 2xl:px-0">
           <div />
           <div className="flex flex-col gap-8">
             <HeroChip />
