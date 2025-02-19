@@ -3,63 +3,59 @@ import kath from "../../../public/kath.avif";
 import jax from "../../../public/jax.avif";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
+import {MainWrapper} from "@/components/wrapper/mainWrapper";
+import {HeroCoachImage} from "@/components/hero/heroCoachImages";
+import HeroAvatarSection from "@/components/hero/heroAvatarSection";
+import {Star} from "lucide-react";
 
 export default function Hero() {
-	return (
-		<div>
-			<div
-				className="flex items-center w-full text-white py-44 bg-primary relative overflow-clip">
+    return (
+        <MainWrapper className="bg-[url(/boys.jpg)] bg-cover bg-left relative bg-zinc-50">
+            <div
+                className="absolute w-full h-full bg-gradient-to-t lg:bg-gradient-to-r from-zinc-950/90 via-zinc-950/60 to-zinc-950/50 lg:from-zinc-950/90 lg:via-zinc-950/70 lg:to-zinc-950/0 top-0 left-0"/>
 
-				{/*<div*/}
-				{/*	className="bg-primary min-h-96 w-96 scale-[2.8] absolute bottom-0 left-1/2 rounded-full -translate-x-[50%] translate-y-[50%] z-30"/>*/}
-				{/*<div*/}
-				{/*	className="bg-secondary min-h-96 w-96 scale-[3.5] absolute bottom-0 left-1/2 rounded-full -translate-x-[50%] translate-y-[50%] z-20"/>*/}
-				{/*<div*/}
-				{/*	className="bg-tertiary min-h-96 w-96 scale-[4.2] absolute bottom-0 left-1/2 rounded-full -translate-x-[50%] translate-y-[50%] z-10"/>*/}
-				{/*<div*/}
-				{/*	className="bg-quaternary min-h-96 w-96 scale-[4.8] absolute bottom-0 left-1/2 rounded-full -translate-x-[50%] translate-y-[50%]"/>*/}
+            <div className="flex items-center w-full text-center md:text-start text-white py-16 overflow-clip md:h-[700px] ">
+                <div className="h-full justify-between flex flex-col gap-8 z-50 px-32 2xl:px-0">
+                    <div/>
 
-				<div
-					className="flex flex-col gap-8 max-w-[700px] justify-center items-center mx-auto z-50">
+                    <div className="flex flex-col gap-8 items-center md:items-start">
+                        <div
+                            className="p-2 px-4 border border-primary/50 text-primary rounded-full w-fit flex flex-row gap-2 items-center bg-primary/10">
+                            <Star size={14} fill="currentColor"/>
+                            <p className="text-md font-medium">Courses start on the 19th March 2025</p>
+                        </div>
 
-					<div className="relative">
-						<Image
-							src={kath}
-							alt={"Parenting The Teen Tribe"}
-							className="h-44 w-44 rounded-full border-2 border-white absolute top-0 left-0"
-						/>
-						<Image
-							src={jax}
-							alt={"Parenting The Teen Tribe"}
-							className="h-44 w-44 rounded-full border-2 border-white ml-28 "
-						/>
-					</div>
+                        <div className="flex flex-col gap-16">
+                            <div className="flex-col flex gap-2">
+                                <h2 className="font-bold text-5xl">Parenting The Teen Tribe</h2>
 
+                                <p className="text-2xl">
+                                    Join our supportive network to navigate the transitional
+                                    <br/>
+                                    years of parenting tweens and teens together.</p>
+                            </div>
 
-					<div className="flex-col flex gap-2 text-center">
-						<h2 className="font-bold text-5xl">Parenting The Teen Tribe</h2>
+                            <div className="flex flex-col md:flex-row gap-4">
+                                <Link href={"https://paystack.com/pay/nuwmul4t7o"} target={"_blank"}>
+                                    <Button variant={"secondary"} size={"lg"}>
+                                        Sign in to join the Tribe
+                                    </Button>
+                                </Link>
+                                <Link href={"https://paystack.com/pay/nuwmul4t7o"} target={"_blank"}>
+                                <Button variant={"ghost"} size={"lg"}>
+                                    View the Network
+                                </Button>
+                            </Link>
+                            </div>
+                        </div>
+                    </div>
 
-						<p className="text-2xl">Join our supportive network to navigate the transitional years of parenting tweens and teens together.</p>
-					</div>
-
-					<div className="flex flex-row gap-4">
-						<Link href={"https://paystack.com/pay/nuwmul4t7o"} target={"_blank"}>
-							<Button variant={"secondary"} size={"lg"}>
-								Sign in to join the Tribe
-							</Button>
-						</Link>
-
-						{/*<Link href={"https://paystack.com/pay/nuwmul4t7o"} target={"_blank"}>*/}
-						{/*	<Button variant={"secondary"} size={"lg"}>*/}
-						{/*		Go to the Network*/}
-						{/*	</Button>*/}
-						{/*</Link>*/}
-					</div>
+                    <HeroAvatarSection/>
 
 
-				</div>
+                </div>
 
-			</div>
-		</div>
-	);
+            </div>
+        </MainWrapper>
+    );
 };

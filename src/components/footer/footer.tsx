@@ -52,27 +52,27 @@ export default function Footer() {
 						className="flex title-font font-medium items-center md:justify-start justify-center text-foreground"
 					>
 						<Hexagon className="w-10 h-10 text-white p-2 bg-primary rounded-full" />
-						<span className="ml-3 text-xl">Tailblocks</span>
+						<span className="ml-3 text-xl">Parenting The Teen Tribe</span>
 					</Link>
 					<p className="text-sm sm:ml-6 sm:mt-0 mt-4">
-						© 2020 Tailblocks —
-						<a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="ml-1" target="_blank">
-							@knyttneve
+						© 2025 Parenting The Teen Tribe —
+						<a href="https://www.instagram.com/parentingtheteentribe/" rel="noopener noreferrer" className="ml-1" target="_blank">
+							@parentingtheteentribe
 						</a>
 					</p>
 					<span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <Link href="#" className="text-muted-foreground">
-              <Facebook className="w-5 h-5" />
-            </Link>
-            <Link href="#" className="ml-3 text-muted-foreground">
-              <Twitter className="w-5 h-5" />
-            </Link>
-            <Link href="#" className="ml-3 text-muted-foreground">
+            {/*<Link href="#" className="text-muted-foreground">*/}
+            {/*  <Facebook className="w-5 h-5" />*/}
+            {/*</Link>*/}
+            {/*<Link href="#" className="ml-3 text-muted-foreground">*/}
+            {/*  <Twitter className="w-5 h-5" />*/}
+            {/*</Link>*/}
+            <Link href="https://www.instagram.com/parentingtheteentribe/" className="ml-3 text-muted-foreground">
               <Instagram className="w-5 h-5" />
             </Link>
-            <Link href="#" className="ml-3 text-muted-foreground">
-              <Linkedin className="w-5 h-5" />
-            </Link>
+            {/*<Link href="#" className="ml-3 text-muted-foreground">*/}
+            {/*  <Linkedin className="w-5 h-5" />*/}
+            {/*</Link>*/}
           </span>
 				</div>
 			</div>

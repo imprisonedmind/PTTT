@@ -3,7 +3,7 @@ import {cn} from "@/lib/utils";
 
 interface MainWrapperProps {
 	children: ReactNode;
-	className: string;
+	className?: string;
 }
 
 export const MainWrapper: FC<MainWrapperProps> = ({children, className}) => {
