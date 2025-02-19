@@ -10,8 +10,13 @@ export default function HeroAvatarSection() {
         <HeroCoachImage imgSrc={jax} className={"-ml-4 z-10"} />
 
         <div className="absolute bottom-1 right-2 z-50">
-          <div className="bg-green-500 h-2 w-2 rounded-full z-10 absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]" />
-          <div className="bg-green-500/30 h-5 w-5 rounded-full duration-[1s] ease-in-out absolute top-1/2 left-1/2 animate-pulse -translate-x-[50%] -translate-y-[50%]" />
+          {/* Static green dot */}
+          <div className="bg-green-500 h-2 w-2 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+
+          {/* Pulsing wrapper to prevent overriding translate */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="bg-green-500/30 h-5 w-5 rounded-full animate-pulse-scale" />
+          </div>
         </div>
       </div>
 

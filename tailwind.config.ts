@@ -9,6 +9,16 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        "pulse-scale": "pulseScale 2s infinite ease-in-out",
+      },
+      keyframes: {
+        pulseScale: {
+          "0%": { transform: "scale(0.5)", opacity: "1" }, // Start small and fully visible
+          "100%": { transform: "scale(1.5)", opacity: "0" }, // Expand while fading out
+        },
+      },
+
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
