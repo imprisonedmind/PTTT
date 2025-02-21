@@ -60,7 +60,7 @@ export default function PricingMain() {
           {plans.map((plan) => (
             <Card
               key={plan.name + plan.period}
-              className={`flex flex-col ${plan.popular ? "border-primary" : ""}`}
+              className={`flex flex-col ${plan.popular ? "border-primary" : ""} w-fit mx-auto`}
             >
               <CardHeader>
                 <CardTitle className="text-xl">{plan.name}</CardTitle>
