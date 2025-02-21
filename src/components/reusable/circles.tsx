@@ -7,8 +7,7 @@ export default function Circles() {
     >
       <div
         className={
-          "relative h-[inherit] flex justify-center items-center opacity-10" +
-          " md:opacity-100"
+          "relative h-[inherit] flex justify-center items-center opacity-0 md:opacity-100"
         }
       >
         <div
