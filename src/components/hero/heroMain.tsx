@@ -5,7 +5,7 @@ export default function HeroMain() {
   return (
     <div className="flex flex-col gap-8">
       <div className="flex-col flex gap-2 max-w-[650px]">
-        <h1 className="font-bold text-5xl">Parenting The Teen Tribe</h1>
+        <h1 className="font-bold text-5xl">Parenting the Teen Tribe</h1>
 
         <p className="text-2xl">
           Join our supportive network to navigate the transitional years of
@@ -28,7 +28,7 @@ export default function HeroMain() {
           target={"_blank"}
         >
           <Button variant={"secondary"} size={"lg"}>
-            Sign in to join the Tribe
+            Sign in to Join the Tribe
           </Button>
         </Link>
       </div>
