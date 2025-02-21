@@ -9,13 +9,15 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { NavbarItem } from "@/components/navbar/navbarItem";
+import { LogoCircle } from "@/components/reusable/LogoCircle";
+import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="sticky top-0 flex items-center justify-between w-full p-4 bg-white drop-shadow z-[500]">
-      <h1 className="font-bold text-3xl min-w-[110px]">PTT</h1>
+      <LogoCircle />
 
       <ul className="hidden md:flex flex-row gap-4">
         <NavbarItem title={"Features"} href="#features" />
@@ -25,7 +27,12 @@ export default function Navbar() {
 
       <div className="hidden md:flex flex-row gap-4 min-w-[110px]">
         {/*<Button variant="secondary">Contact</Button>*/}
-        <Button variant="default">Get Started</Button>
+        <Link
+          href="https://parenting-the-teen-tribe.mn.co/sign_in"
+          target="_blank"
+        >
+          <Button variant="default">Get Started</Button>
+        </Link>
       </div>
 
       <Sheet open={open} onOpenChange={setOpen}>

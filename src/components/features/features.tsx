@@ -2,9 +2,10 @@
 
 import type React from "react";
 
-import { ArrowRight, Calendar, Heart, Star } from "lucide-react";
+import { Calendar, Heart, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MainWrapper } from "@/components/wrapper/mainWrapper";
+import Link from "next/link";
 
 export default function Features() {
   return (
@@ -42,12 +43,17 @@ export default function Features() {
           />
 
           <div className="flex justify-center mt-20">
-            <Button
-              size="lg"
-              className="text-white bg-primary hover:bg-primary/90"
+            <Link
+              href={"https://parenting-the-teen-tribe.mn.co/sign_in"}
+              target={"_blank"}
             >
-              Join The Course
-            </Button>
+              <Button
+                size="lg"
+                className="text-white bg-primary hover:bg-primary/90"
+              >
+                Join The Course
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -80,13 +86,13 @@ function FeatureCard({
           {title}
         </h2>
         <p className="leading-relaxed text-base">{description}</p>
-        <Button
-          variant="link"
-          className="mt-3 text-primary inline-flex items-center"
-        >
-          Learn More
-          <ArrowRight className="w-4 h-4 ml-2" />
-        </Button>
+        {/*<Button*/}
+        {/*  variant="link"*/}
+        {/*  className="mt-3 text-primary inline-flex items-center"*/}
+        {/*>*/}
+        {/*  Learn More*/}
+        {/*  <ArrowRight className="w-4 h-4 ml-2" />*/}
+        {/*</Button>*/}
       </div>
     </div>
   );

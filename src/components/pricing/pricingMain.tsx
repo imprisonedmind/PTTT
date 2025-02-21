@@ -9,19 +9,20 @@ import {
 } from "@/components/ui/card";
 import { ArrowRight, Check } from "lucide-react";
 import { MainWrapper } from "@/components/wrapper/mainWrapper";
+import Link from "next/link";
 
 export default function PricingMain() {
   const plans = [
-    {
-      name: "Network Access",
-      price: "R100",
-      period: "/mo",
-      features: [
-        "Access to the Mighty Network",
-        "Connect with community members",
-        "Participate in discussions",
-      ],
-    },
+    // {
+    //   name: "Network Access",
+    //   price: "R100",
+    //   period: "/mo",
+    //   features: [
+    //     "Access to the Mighty Network",
+    //     "Connect with community members",
+    //     "Participate in discussions",
+    //   ],
+    // },
     // {
     // 	name: "Network Access",
     // 	price: "R1080",
@@ -36,7 +37,7 @@ export default function PricingMain() {
       popular: true,
       features: [
         "Full course access",
-        "3 Month Mighty Network access",
+        "3 Month Network access",
         "Exclusive resources",
       ],
     },
@@ -90,10 +91,15 @@ export default function PricingMain() {
                 </ul>
               </CardContent>
               <CardFooter className="mt-auto">
-                <Button className="w-full bg-[#7FB3B1] hover:bg-[#7FB3B1]/90">
-                  Choose plan
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                <Link
+                  href="https://paystack.com/pay/nuwmul4t7o"
+                  target="_blank"
+                >
+                  <Button className="w-full bg-[#7FB3B1] hover:bg-[#7FB3B1]/90">
+                    Choose plan
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}

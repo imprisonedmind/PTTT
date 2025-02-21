@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/reusable/sectionHeader";
 import Image, { StaticImageData } from "next/image";
 import kath from "../../../public/kath.avif";
@@ -68,13 +66,13 @@ function CoachCard({ name, role, description, imgSrc }: CoachCardProps) {
         {/* Description & Link */}
         <div className="flex-grow">
           <p className="leading-relaxed text-base">{description}</p>
-          <Button
-            variant="link"
-            className="mt-3 text-primary inline-flex items-center"
-          >
-            Learn More
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+          {/*<Button*/}
+          {/*  variant="link"*/}
+          {/*  className="mt-3 text-primary inline-flex items-center"*/}
+          {/*>*/}
+          {/*  Learn More*/}
+          {/*  <ArrowRight className="w-4 h-4 ml-2" />*/}
+          {/*</Button>*/}
         </div>
       </div>
     </div>
