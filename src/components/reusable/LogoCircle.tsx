@@ -10,10 +10,14 @@ interface LogoCircleProps {
 
 export const LogoCircle: FC<LogoCircleProps> = ({ size }) => {
   return (
-    <Image
-      src={logo}
-      alt={"Parenting The Teen Tribe"}
-      className={cn("h-12 w-12 overflow-clip rounded-full", size)}
-    />
+    <div
+      className={cn("h-12 w-12 overflow-clip rounded-full object-cover", size)}
+    >
+      <Image
+        src={logo}
+        alt={"Parenting The Teen Tribe"}
+        className={"h-full w-full scale-[1.3]"}
+      />
+    </div>
   );
 };
