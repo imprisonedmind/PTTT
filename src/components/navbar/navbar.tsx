@@ -48,9 +48,7 @@ export default function Navbar() {
           className="fixed inset-0 bg-white z-[1000] p-6 flex flex-col gap-6"
         >
           <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
-          <div className="flex justify-between items-center">
-            <h1 className="font-bold text-2xl">PTT</h1>
-          </div>
+
           <ul className="flex flex-col gap-4 text-lg">
             <li>
               <Link href="#features">
