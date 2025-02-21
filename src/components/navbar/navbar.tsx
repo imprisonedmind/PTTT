@@ -53,13 +53,21 @@ export default function Navbar() {
           </div>
           <ul className="flex flex-col gap-4 text-lg">
             <li>
-              <button onClick={() => setOpen(false)}>Features</button>
+              <Link href="#features">
+                <button onClick={() => setOpen(false)}>Features</button>
+              </Link>
             </li>
             <li>
-              <button onClick={() => setOpen(false)}>Meet your Coaches</button>
+              <Link href="#coaches">
+                <button onClick={() => setOpen(false)}>
+                  Meet your Coaches
+                </button>
+              </Link>
             </li>
             <li>
-              <button onClick={() => setOpen(false)}>Pricing</button>
+              <Link href={"#pricing"}>
+                <button onClick={() => setOpen(false)}>Pricing</button>
+              </Link>
             </li>
           </ul>
           <div className="flex flex-col gap-4">
@@ -70,13 +78,18 @@ export default function Navbar() {
             {/*>*/}
             {/*  Contact*/}
             {/*</Button>*/}
-            <Button
-              variant="default"
-              className="w-full"
-              onClick={() => setOpen(false)}
+            <Link
+              href="https://parenting-the-teen-tribe.mn.co/sign_in"
+              target="_blank"
             >
-              Get Started
-            </Button>
+              <Button
+                variant="default"
+                className="w-full"
+                onClick={() => setOpen(false)}
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
         </SheetContent>
       </Sheet>
