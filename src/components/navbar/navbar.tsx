@@ -17,7 +17,9 @@ export default function Navbar() {
 
   return (
     <div className="sticky top-0 flex items-center justify-between w-full p-4 bg-white drop-shadow z-[500]">
-      <LogoCircle />
+      <div className="min-w-[110px]">
+        <LogoCircle />
+      </div>
 
       <ul className="hidden md:flex flex-row gap-4">
         <NavbarItem title={"Features"} href="#features" />
