@@ -1,13 +1,5 @@
 import { NextResponse } from "next/server";
 
-// Global array to store incoming events (for demonstration only)
-let events: { receivedAt: string; payload: any }[] = [];
-
-// Export a helper so other routes can access the stored events.
-export function getStoredEvents() {
-  return events;
-}
-
 export async function POST(request: Request) {
   try {
     // Parse the JSON payload from YOCO
@@ -44,9 +36,6 @@ export async function POST(request: Request) {
         { status: 500 },
       );
     }
-
-    // Store the event (timestamp and payload)
-    events.push({ receivedAt: new Date().toISOString(), payload });
 
     // Respond to YOCO with a success status
     return NextResponse.json({ success: true }, { status: 200 });
