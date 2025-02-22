@@ -10,6 +10,7 @@ import {
 import { ArrowRight, Check } from "lucide-react";
 import { MainWrapper } from "@/components/wrapper/mainWrapper";
 import Link from "next/link";
+import { paymentURl } from "@/lib/utils";
 
 export default function PricingMain() {
   const plans = [
@@ -91,10 +92,7 @@ export default function PricingMain() {
                 </ul>
               </CardContent>
               <CardFooter className="mt-auto">
-                <Link
-                  href="https://paystack.com/pay/nuwmul4t7o"
-                  target="_blank"
-                >
+                <Link href={paymentURl}>
                   <Button className="w-full bg-[#7FB3B1] hover:bg-[#7FB3B1]/90">
                     Choose plan
                     <ArrowRight className="w-4 h-4 ml-2" />

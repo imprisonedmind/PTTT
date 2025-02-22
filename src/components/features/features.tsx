@@ -6,6 +6,7 @@ import { Calendar, Heart, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MainWrapper } from "@/components/wrapper/mainWrapper";
 import Link from "next/link";
+import { signInUrl } from "@/lib/utils";
 
 export default function Features() {
   return (
@@ -43,10 +44,7 @@ export default function Features() {
           />
 
           <div className="flex justify-center mt-20">
-            <Link
-              href={"https://parenting-the-teen-tribe.mn.co/sign_in"}
-              target={"_blank"}
-            >
+            <Link href={signInUrl} target={"_blank"}>
               <Button
                 size="lg"
                 className="text-white bg-primary hover:bg-primary/90"

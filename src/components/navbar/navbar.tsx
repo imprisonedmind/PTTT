@@ -11,6 +11,7 @@ import {
 import { NavbarItem } from "@/components/navbar/navbarItem";
 import { LogoCircle } from "@/components/reusable/LogoCircle";
 import Link from "next/link";
+import { signInUrl } from "@/lib/utils";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -29,10 +30,7 @@ export default function Navbar() {
 
       <div className="hidden md:flex flex-row gap-4 min-w-[110px]">
         {/*<Button variant="secondary">Contact</Button>*/}
-        <Link
-          href="https://parenting-the-teen-tribe.mn.co/sign_in"
-          target="_blank"
-        >
+        <Link href={signInUrl} target={"_blank"}>
           <Button variant="default">Get Started</Button>
         </Link>
       </div>
@@ -76,10 +74,7 @@ export default function Navbar() {
             {/*>*/}
             {/*  Contact*/}
             {/*</Button>*/}
-            <Link
-              href="https://parenting-the-teen-tribe.mn.co/sign_in"
-              target="_blank"
-            >
+            <Link href={signInUrl} target="_blank">
               <Button
                 variant="default"
                 className="w-full"
