@@ -24,9 +24,9 @@ export async function POST(request: Request) {
       email,
     },
     // Optional: Provide redirect URLs for when the customer completes (or cancels) payment.
-    successUrl: "https://yourdomain.com/payment-success",
-    cancelUrl: "https://yourdomain.com/payment-cancel",
-    failureUrl: "https://yourdomain.com/payment-failure",
+    successUrl: "https://parentingtheteentribe.com/payment/success",
+    cancelUrl: "https://parentingtheteentribe.com/payment/cancel",
+    failureUrl: "https://parentingtheteentribe.com/payment/failed",
   };
 
   // Call YOCO Checkout API to create a checkout session.
