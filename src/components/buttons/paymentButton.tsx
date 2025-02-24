@@ -15,18 +15,18 @@ interface PaymentButtonProps extends ButtonProps {
 
 export const PaymentButton = forwardRef<HTMLButtonElement, PaymentButtonProps>(
   ({ variant = "primary", className, ...props }, ref) => {
-    const baseStyles = "w-full";
+    const baseStyles = "w-full rounded-md font-semibold";
     const variantStyles = {
-      primary: "bg-[#0077FF] hover:bg-[#0066CC] text-white",
-      secondary: "bg-[#F0F0F0] hover:bg-[#E0E0E0] text-[#333333]",
+      primary: "bg-[#E12E56] hover:bg-[#c02649] text-white",
+      secondary: "bg-[#F5F5F5] hover:bg-[#c02649] text-[#002B5C]",
       outline:
-        "bg-transparent border border-[#0077FF] text-[#0077FF] hover:bg-[#0077FF] hover:text-white",
+        "bg-transparent border-2 border-[#0072C6] text-[#0072C6] hover:bg-[#0072C6] hover:text-white",
     };
 
     return (
       <Button
         ref={ref}
-        // @ts-expect-error I dunno
+        // @ts-expect-error
         className={`${baseStyles} ${variantStyles[variant]} ${className}`}
         {...props}
       />

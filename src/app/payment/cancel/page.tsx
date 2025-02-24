@@ -14,17 +14,19 @@ import { PaymentButton } from "@/components/buttons/paymentButton";
 
 export default function CancelPaymentPage() {
   return (
-    <Card>
+    <Card className="border-0 shadow-lg">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-[#333333] flex items-center justify-center">
-          <AlertCircle className="mr-2 text-yellow-500" />
+        <CardTitle className="text-2xl font-bold text-[#002B5C] flex items-center justify-center">
+          <AlertCircle className="mr-2 text-[#F5A623]" />
           Payment Cancelled
         </CardTitle>
-        <CardDescription className="text-center">
+
+        <CardDescription className="text-center text-[#666666]">
           Your payment of R 800.00 has been cancelled.
         </CardDescription>
       </CardHeader>
-      <CardContent className="text-center">
+
+      <CardContent className="text-center text-[#002B5C]">
         <p className="mb-4">
           You have chosen to cancel your payment. No charges have been made to
           your account.
@@ -34,8 +36,9 @@ export default function CancelPaymentPage() {
           hesitate to contact us.
         </p>
       </CardContent>
+
       <CardFooter className="flex justify-center gap-4">
-        <Link href="/create-checkout">
+        <Link href="/payment/checkout">
           <PaymentButton>Try Again</PaymentButton>
         </Link>
         <Link href="/">

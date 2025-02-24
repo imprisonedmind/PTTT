@@ -26,14 +26,17 @@ import { Loader2 } from "lucide-react";
 import { PaymentButton } from "@/components/buttons/paymentButton";
 
 const formSchema = z.object({
-  firstName: z.string().min(2, {
+  name_first: z.string().min(2, {
     message: "First name must be at least 2 characters.",
   }),
-  lastName: z.string().min(2, {
+  name_last: z.string().min(2, {
     message: "Last name must be at least 2 characters.",
   }),
-  email: z.string().email({
+  email_address: z.string().email({
     message: "Please enter a valid email address.",
+  }),
+  cell_number: z.string().min(10, {
+    message: "Please enter a valid cell number.",
   }),
 });
 
@@ -44,21 +47,26 @@ export default function CreateCheckoutPage() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
+      name_first: "",
+      name_last: "",
+      email_address: "",
+      cell_number: "",
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true);
     try {
-      const res = await fetch("/api/create-checkout", {
+      const res = await fetch("/api/payfast/checkout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...values, amount: 80000 }), // 800 ZAR in cents
+        body: JSON.stringify({
+          ...values,
+          amount: "800.00",
+          item_name: "Course + Network Subscription",
+        }),
       });
 
       if (!res.ok) {
@@ -66,7 +74,7 @@ export default function CreateCheckoutPage() {
       }
 
       const data = await res.json();
-      router.push(data.redirectUrl);
+      router.push(data.url);
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred");
@@ -76,13 +84,13 @@ export default function CreateCheckoutPage() {
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-[#333333]">
-          Pay with Yoco
+    <Card className="border-0 shadow-lg">
+      <CardHeader className="space-y-1">
+        <CardTitle className="text-2xl font-bold text-[#002B5C]">
+          Pay with <span className="!text-[#E12E56]">PayFast</span>
         </CardTitle>
-        <CardDescription>
-          Enter your details to complete the payment
+        <CardDescription className="text-[#666666]">
+          Enter your details to continue to PayFast's payment portal.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -91,12 +99,12 @@ export default function CreateCheckoutPage() {
             <div className="grid grid-cols-2 gap-4">
               <FormField
                 control={form.control}
-                name="firstName"
+                name="name_first"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>First Name</FormLabel>
+                    <FormLabel className="text-[#002B5C]">First Name</FormLabel>
                     <FormControl>
-                      <Input {...field} />
+                      <Input {...field} className="border-[#E5E5E5]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -104,41 +112,81 @@ export default function CreateCheckoutPage() {
               />
               <FormField
                 control={form.control}
-                name="lastName"
+                name="name_last"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Last Name</FormLabel>
+                    <FormLabel className="text-[#002B5C]">Last Name</FormLabel>
                     <FormControl>
-                      <Input {...field} />
+                      <Input {...field} className="border-[#E5E5E5]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
             </div>
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input type="email" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            <div className="grid grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="email_address"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-[#002B5C]">Email</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="email"
+                        {...field}
+                        className="border-[#E5E5E5]"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="cell_number"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-[#002B5C]">
+                      Cell Number
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        placeholder="082XXXXXXXX"
+                        className="border-[#E5E5E5]"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
           </form>
         </Form>
-      </CardContent>
-      <CardFooter className="flex flex-col space-y-4">
-        <div className="w-full p-4 bg-[#F0F0F0] rounded-md">
-          <div className="flex justify-between items-center">
-            <span className="font-semibold text-[#333333]">Total Amount:</span>
-            <span className="font-bold text-[#333333]">R 800.00</span>
+        {/* Pricing breakdown */}
+        <div className="mt-6 p-4 bg-[#F5F5F5] rounded-lg">
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-between items-center">
+              <span className="font-semibold text-[#002B5C]">Course Fee:</span>
+              <span className="font-bold text-[#002B5C]">R 700.00</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="font-semibold text-[#002B5C]">
+                Monthly Subscription:
+              </span>
+              <span className="font-bold text-[#002B5C]">R 100.00</span>
+            </div>
+            <div className="flex justify-between items-center border-t border-[#E5E5E5] pt-2 mt-2">
+              <span className="font-semibold text-[#002B5C]">
+                Total Amount:
+              </span>
+              <span className="font-bold text-[#002B5C]">R 800.00</span>
+            </div>
           </div>
         </div>
+      </CardContent>
+      <CardFooter className="flex flex-col space-y-4">
         <PaymentButton
           type="submit"
           disabled={loading}

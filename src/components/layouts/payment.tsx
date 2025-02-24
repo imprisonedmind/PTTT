@@ -1,8 +1,8 @@
 "use client";
 import type { ReactNode } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import yoco from "../../../public/yoco.svg";
+import Image from "next/image";
+import payfast from "../../../public/payfast-logo.svg";
 
 interface PaymentLayoutProps {
   children: ReactNode;
@@ -10,15 +10,20 @@ interface PaymentLayoutProps {
 
 export function PaymentLayout({ children }: PaymentLayoutProps) {
   return (
-    <div className="min-h-screen bg-[#F5F5F5] flex">
-      <div className="justify-center items-center w-1/2 bg-cover bg-center hidden lg:flex bg-[#0080ff]">
-        <Image
-          src={yoco}
-          alt="Company logo"
-          width={176}
-          height={176}
-          className="w-44 h-auto"
-        />
+    <div className="min-h-screen bg-white flex">
+      <div className="flex-col justify-center items-center w-1/2 bg-cover bg-center hidden gap-8 lg:flex bg-[#0072C6]">
+        <div
+          className={
+            "bg-white flex justify-center items-center p-8 px-16 w-[300px]"
+          }
+        >
+          <Image src={payfast} alt={"payfast.io logo"} className="size-44" />
+        </div>
+
+        <div className="text-white text-center">
+          <h1 className="text-4xl font-bold">Secure Payments</h1>
+          <p className="text-xl">Fast, reliable payment processing</p>
+        </div>
       </div>
       <div className="w-full lg:w-1/2 flex items-center justify-center p-4">
         <motion.div
