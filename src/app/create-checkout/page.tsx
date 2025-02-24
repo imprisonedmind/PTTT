@@ -90,7 +90,7 @@ export default function CreateCheckoutPage() {
           Pay with <span className="!text-[#E12E56]">PayFast</span>
         </CardTitle>
         <CardDescription className="text-[#666666]">
-          Enter your details to continue to PayFast's payment portal.
+          Enter your details to continue to PayFast&#39;s payment portal.
         </CardDescription>
       </CardHeader>
       <CardContent>
