@@ -26,7 +26,7 @@ export const PaymentButton = forwardRef<HTMLButtonElement, PaymentButtonProps>(
     return (
       <Button
         ref={ref}
-        // @ts-expect-error
+        // @ts-expect-error IDK why I need this
         className={`${baseStyles} ${variantStyles[variant]} ${className}`}
         {...props}
       />
