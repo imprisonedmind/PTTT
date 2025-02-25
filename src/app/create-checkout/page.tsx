@@ -35,9 +35,7 @@ const formSchema = z.object({
   email_address: z.string().email({
     message: "Please enter a valid email address.",
   }),
-  cell_number: z.string().min(10, {
-    message: "Please enter a valid cell number.",
-  }),
+  cell_number: z.string().optional(),
 });
 
 export default function CreateCheckoutPage() {

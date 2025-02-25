@@ -4,7 +4,7 @@ import crypto from "crypto";
 
 // Helper function to mimic PHP's urlencode: spaces as '+' and hex codes in upper case.
 function pfUrlEncode(value: string): string {
-  return encodeURIComponent(value.trim())
+  return encodeURIComponent(value?.trim() || "")
     .replace(/%20/g, "+")
     .replace(/%[a-f0-9]{2}/g, (match) => match.toUpperCase());
 }
@@ -16,13 +16,7 @@ export async function POST(request: Request) {
       await request.json();
 
     // Validate required fields.
-    if (
-      !name_first ||
-      !name_last ||
-      !email_address ||
-      !cell_number ||
-      !item_name
-    ) {
+    if (!name_first || !name_last || !email_address || !item_name) {
       return NextResponse.json(
         { error: "Missing required buyer details" },
         { status: 400 },
@@ -42,7 +36,7 @@ export async function POST(request: Request) {
       name_first,
       name_last,
       email_address,
-      cell_number,
+      cell_number: cell_number || "", // Make cell_number optional
       amount: "800", // R800 total (R700 course fee + R100 subscription)
       item_name, // e.g. "Course + Network Subscription"
       subscription_type: "1", // Subscription
@@ -74,7 +68,7 @@ export async function POST(request: Request) {
 
     let signatureString = "";
     for (const key of signatureKeys) {
-      if (params[key] !== "") {
+      if (params[key] !== undefined && params[key] !== "") {
         signatureString += `${key}=${pfUrlEncode(params[key])}&`;
       }
     }
