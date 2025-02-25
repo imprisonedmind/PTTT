@@ -38,8 +38,9 @@ export default function PricingMain() {
       popular: true,
       features: [
         "Full course access",
-        "3 Month Network access",
+        "Parenting Network access",
         "Exclusive resources",
+        "Professional Coaches",
       ],
     },
   ];
