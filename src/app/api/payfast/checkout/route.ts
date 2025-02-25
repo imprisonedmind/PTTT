@@ -4,7 +4,7 @@ import crypto from "crypto";
 
 // Helper function to mimic PHP's urlencode: spaces as '+' and hex codes in upper case.
 function pfUrlEncode(value: string): string {
-  return encodeURIComponent(value?.trim() || "")
+  return encodeURIComponent(value || "")
     .replace(/%20/g, "+")
     .replace(/%[a-f0-9]{2}/g, (match) => match.toUpperCase());
 }
@@ -36,7 +36,7 @@ export async function POST(request: Request) {
       name_first,
       name_last,
       email_address,
-      cell_number: cell_number || "", // Make cell_number optional
+      cell_number: cell_number || "", // Make cell_number optional with empty string default
       amount: "800", // R800 total (R700 course fee + R100 subscription)
       item_name, // e.g. "Course + Network Subscription"
       subscription_type: "1", // Subscription
@@ -47,6 +47,7 @@ export async function POST(request: Request) {
     };
 
     // Build the signature string using the required keys in the exact order.
+    // IMPORTANT: For PayFast, you must include ALL fields in the signature, even if empty
     const signatureKeys = [
       "merchant_id",
       "merchant_key",
@@ -68,10 +69,10 @@ export async function POST(request: Request) {
 
     let signatureString = "";
     for (const key of signatureKeys) {
-      if (params[key] !== undefined && params[key] !== "") {
-        signatureString += `${key}=${pfUrlEncode(params[key])}&`;
-      }
+      // Include the key-value pair in the signature string even if the value is an empty string
+      signatureString += `${key}=${pfUrlEncode(params[key])}&`;
     }
+
     // Remove the trailing '&'
     signatureString = signatureString.slice(0, -1);
 
@@ -89,9 +90,14 @@ export async function POST(request: Request) {
     params.signature = signature;
 
     // Build the final query string for the redirect URL.
+    // Important: Include all parameters in the request, even if empty
     const queryString = Object.keys(params)
       .map((key) => `${key}=${pfUrlEncode(params[key])}`)
       .join("&");
+
+    // For debugging
+    console.log("Generated signature:", signature);
+    console.log("Signature string:", signatureString);
 
     // Use the correct PayFast URL (set PAYFAST_URL to production when live)
     const payfastUrl =
