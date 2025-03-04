@@ -37,11 +37,11 @@ export async function POST(request: Request) {
       name_last,
       email_address,
       cell_number: cell_number || "", // Make cell_number optional with empty string default
-      amount: "800", // R800 total (R700 course fee + R100 subscription)
+      amount: "250", // R800 total (R700 course fee + R100 subscription)
       item_name, // e.g. "Course + Network Subscription"
       subscription_type: "1", // Subscription
       billing_date: currentDate, // Set to today's date (server-side)
-      recurring_amount: "100", // R100 recurring charge
+      recurring_amount: "250", // R100 recurring charge
       frequency: "3", // 3 = Monthly
       cycles: "0", // 0 = Indefinite subscription
     };

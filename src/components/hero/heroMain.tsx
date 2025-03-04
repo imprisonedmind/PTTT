@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { networkUrl, signInUrl } from "@/lib/utils";
+import { networkUrl } from "@/lib/utils";
 
 export default function HeroMain() {
   return (
@@ -15,13 +15,13 @@ export default function HeroMain() {
       </div>
 
       <div className="flex flex-col md:flex-row gap-4">
-        <Link href={networkUrl} target={"_blank"}>
-          <Button variant={"outline"} size={"lg"}>
-            View the Network
-          </Button>
-        </Link>
+        {/*<Link href={networkUrl} target={"_blank"}>*/}
+        {/*  <Button variant={"outline"} size={"lg"}>*/}
+        {/*    View the Network*/}
+        {/*  </Button>*/}
+        {/*</Link>*/}
 
-        <Link href={signInUrl} target={"_blank"}>
+        <Link href={networkUrl} target={"_blank"}>
           <Button variant={"secondary"} size={"lg"}>
             Sign in to Join the Tribe
           </Button>

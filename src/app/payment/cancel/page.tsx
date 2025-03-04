@@ -22,11 +22,11 @@ export default function CancelPaymentPage() {
         </CardTitle>
 
         <CardDescription className="text-center text-[#666666]">
-          Your payment of R 800.00 has been cancelled.
+          Your payment of R 250.00 has been cancelled.
         </CardDescription>
       </CardHeader>
 
-      <CardContent className="text-center text-[#002B5C]">
+      <CardContent className="text-[#002B5C]">
         <p className="mb-4">
           You have chosen to cancel your payment. No charges have been made to
           your account.

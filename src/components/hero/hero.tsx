@@ -1,5 +1,4 @@
 import { MainWrapper } from "@/components/wrapper/mainWrapper";
-import HeroAvatarSection from "@/components/hero/heroAvatarSection";
 import HeroChip from "@/components/hero/heroChip";
 import HeroMain from "@/components/hero/heroMain";
 import Circles from "@/components/reusable/circles";
@@ -16,7 +15,7 @@ export default function Hero() {
             <HeroChip />
             <HeroMain />
           </div>
-          <HeroAvatarSection />
+          {/*<HeroAvatarSection />*/}
         </div>
       </div>
 

@@ -32,15 +32,15 @@ export default function PricingMain() {
     // 	features: ["Access to the Mighty Network", "Connect with community members", "Participate in discussions"],
     // },
     {
-      name: "Course + Network",
-      price: "R800",
+      name: "Monthly Subscription",
+      price: "R250",
       period: "",
       popular: true,
       features: [
-        "Full course access",
-        "Parenting Network access",
-        "Exclusive resources",
-        "Professional Coaches",
+        "Bi-monthly modules",
+        "TTT midweek chat",
+        "Resource sharing",
+        "Engaging discussions",
       ],
     },
   ];
@@ -53,12 +53,11 @@ export default function PricingMain() {
             Pricing
           </h1>
           <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-            Choose the plan that best fits your needs and start your journey
-            today.
+            Subscribe today and join our community and be part of the TTT tribe.
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center mt-12">
+        <div className="flex flex-col gap-4 justify-center mt-12">
           {plans.map((plan) => (
             <Card
               key={plan.name + plan.period}
@@ -102,6 +101,7 @@ export default function PricingMain() {
               </CardFooter>
             </Card>
           ))}
+          <p className={"mx-auto italic text-sm"}>Cancel at any time</p>
         </div>
       </div>
     </MainWrapper>

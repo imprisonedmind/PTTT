@@ -20,8 +20,8 @@ export default function MeetYourCoaches() {
         <div className="flex flex-wrap -m-4">
           <CoachCard
             name="Katherine Heath"
-            role="Transformational Coach"
-            description="Katherine works with individuals across age groups to build self-knowledge as a foundation for purposeful living. Passionate about coaching teenagers and young adults, she helps build inner resilience and strengthen mental health through enhanced communication and self-awareness."
+            role="Professional Integral Coach"
+            description="Katherine is a professional integral coach, with a passion for collaborating with people who have the courage and compassion to take responsibility for building the life they choose, and a willingness to consider various possibilities to find balance and meaning. She believes that self-knowledge is a foundational life skill.  Self-knowledge is developed through exploring current habits and behavioural patterns, and noticing emotional responses and triggers to everyday life events and relationships. This process of building the muscle of self-correction develops resilience and strengthens mental health, while working towards personal coaching goals and outcomes. Coaching is therefore a powerful way to foster self awareness and enhance one’s capacity to face obstacles with strength and confidence. It is both about prioritising the self, as well as taking responsibility for who we are in the world."
             imgSrc={kath}
           />
           <CoachCard

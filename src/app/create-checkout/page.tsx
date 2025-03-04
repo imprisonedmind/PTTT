@@ -62,7 +62,7 @@ export default function CreateCheckoutPage() {
         },
         body: JSON.stringify({
           ...values,
-          amount: "800.00",
+          amount: "250.00",
           item_name: "Course + Network Subscription",
         }),
       });
@@ -165,22 +165,22 @@ export default function CreateCheckoutPage() {
         {/* Pricing breakdown */}
         <div className="mt-6 p-4 bg-[#F5F5F5] rounded-lg">
           <div className="flex flex-col gap-2">
-            <div className="flex justify-between items-center">
-              <span className="font-semibold text-[#002B5C]">Course Fee:</span>
-              <span className="font-bold text-[#002B5C]">R 700.00</span>
-            </div>
+            {/*<div className="flex justify-between items-center">*/}
+            {/*  <span className="font-semibold text-[#002B5C]">Course Fee:</span>*/}
+            {/*  <span className="font-bold text-[#002B5C]">R 700.00</span>*/}
+            {/*</div>*/}
             <div className="flex justify-between items-center">
               <span className="font-semibold text-[#002B5C]">
                 Monthly Subscription:
               </span>
-              <span className="font-bold text-[#002B5C]">R 100.00</span>
+              <span className="font-bold text-[#002B5C]">R 250.00</span>
             </div>
-            <div className="flex justify-between items-center border-t border-[#E5E5E5] pt-2 mt-2">
-              <span className="font-semibold text-[#002B5C]">
-                Total Amount:
-              </span>
-              <span className="font-bold text-[#002B5C]">R 800.00</span>
-            </div>
+            {/*<div className="flex justify-between items-center border-t border-[#E5E5E5] pt-2 mt-2">*/}
+            {/*  <span className="font-semibold text-[#002B5C]">*/}
+            {/*    Total Amount:*/}
+            {/*  </span>*/}
+            {/*  <span className="font-bold text-[#002B5C]">R 800.00</span>*/}
+            {/*</div>*/}
           </div>
         </div>
       </CardContent>
