@@ -92,10 +92,10 @@ export default function PricingMain() {
                 </ul>
               </CardContent>
               <CardFooter className="mt-auto">
-                <Link href={paymentURl}>
+                <Link href={paymentURl} className={"w-full"}>
                   <Button className="w-full bg-[#7FB3B1] hover:bg-[#7FB3B1]/90">
                     Choose plan
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
               </CardFooter>
