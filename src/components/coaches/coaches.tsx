@@ -6,6 +6,10 @@ import Image, { StaticImageData } from "next/image";
 import kath from "../../../public/kath.avif";
 import jax from "../../../public/jax.avif";
 import { MainWrapper } from "@/components/wrapper/mainWrapper";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { networkUrl } from "@/lib/utils";
 
 export default function MeetYourCoaches() {
   return (
@@ -27,7 +31,7 @@ export default function MeetYourCoaches() {
           <CoachCard
             name="Jax Hickey"
             role="Parenting & Family Coach"
-            description="Jax leverages personal experience and professional expertise to support parents navigating the challenges of raising tweens and teens. Her approach emphasizes healthy boundaries and effective communication, ensuring families connect and grow stronger together."
+            description="Jax leverages personal experience and professional expertise to support parents navigating the challenges of raising Tweens and Teens. Her approach emphasizes healthy boundaries and effective communication, ensuring families connect and grow stronger together."
             imgSrc={jax}
           />
         </div>
@@ -65,14 +69,18 @@ function CoachCard({ name, role, description, imgSrc }: CoachCardProps) {
         </div>
         {/* Description & Link */}
         <div className="flex-grow">
-          <p className="leading-relaxed text-base">{description}</p>
-          {/*<Button*/}
-          {/*  variant="link"*/}
-          {/*  className="mt-3 text-primary inline-flex items-center"*/}
-          {/*>*/}
-          {/*  Learn More*/}
-          {/*  <ArrowRight className="w-4 h-4 ml-2" />*/}
-          {/*</Button>*/}
+          <p className="leading-relaxed text-base line-clamp-4 overflow-ellipsis">
+            {description}
+          </p>
+          <Link href={networkUrl} target={"_blank"}>
+            <Button
+              variant="link"
+              className="mt-3 text-primary inline-flex items-center"
+            >
+              Learn More
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

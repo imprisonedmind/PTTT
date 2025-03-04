@@ -32,14 +32,14 @@ export default function Features() {
           <FeatureCard
             icon={<Star className="w-10 h-10 sm:w-16 sm:h-16" />}
             title="The Results You'll Get"
-            description="Our course and community are pretty special. We're focused on ways of making a significant difference in your and your family's life. Connect with other parents, learn from qualified coaches, gain new parenting strategies, and strengthen family relationships."
+            description="Our course and community are pretty special. We're focused on ways of making a significant difference in your and your family's dynamics. Connect with other parents, learn from qualified coaches, gain new parenting strategies, and strengthen family relationships."
             reverse={true}
           />
 
           <FeatureCard
             icon={<Calendar className="w-10 h-10 sm:w-16 sm:h-16" />}
             title="When You Join Today"
-            description="Get access to our TTT community, participate in fun polls, and start the six-module course on March 18th, 2025. Explore tools, skills, and mindsets to open up new lens thinking, greater self-awareness, and navigate these important years with curiosity, mindfulness, courage, and success."
+            description="Gain immediate access to the TTT community chat to meet fellow members and be part of a supportive space. Participate in our bi-monthly modules on the 2nd and 4th Thursday of each month—starting March 27, 2025. Expect follow-up discussions, monthly themes, fun polls, and practical steps that help you explore new tools, mindsets, and greater self-awareness. We aim to offer a gentle holding and learning environment, so you can build new habits, shift perspectives, and navigate these important teen years with curiosity, mindfulness, and courage."
             reverse={false}
           />
 
@@ -49,7 +49,7 @@ export default function Features() {
                 size="lg"
                 className="text-white bg-primary hover:bg-primary/90"
               >
-                Join The Course
+                Sign up to be part of this supportive community
               </Button>
             </Link>
           </div>

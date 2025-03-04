@@ -17,7 +17,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 flex items-center justify-between w-full p-4 bg-white drop-shadow z-[500]">
+    <div className="sticky top-0 flex items-center justify-between w-full p-4 bg-white drop-shadow z-[600]">
       <div className="min-w-[110px]">
         <LogoCircle />
       </div>
