@@ -9,8 +9,8 @@ export default function Hero() {
     <MainWrapper className="relative bg-quinary overflow-clip">
       {/*<HeroOverlay />*/}
 
-      <div className="flex relative items-center w-full text-center md:text-start py-32 md:h-[700px]">
-        <div className="flex flex-col gap-8">
+      <div className="flex relative items-center w-full text-center md:text-start py-32 md:h-[500px]">
+        <div className="flex flex-col gap-8 px-4 md:pl-8 mx-auto md:mx-0">
           <HeroChip />
           <HeroMain />
         </div>

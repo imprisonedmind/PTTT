@@ -5,7 +5,7 @@ import { networkUrl } from "@/lib/utils";
 export default function HeroMain() {
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex-col flex gap-2 max-w-[650px]">
+      <div className="flex-col flex gap-2 max-w-[650px] z-[500]">
         <h1 className="font-bold text-5xl">Parenting the Teen Tribe</h1>
 
         <p className="text-2xl">
