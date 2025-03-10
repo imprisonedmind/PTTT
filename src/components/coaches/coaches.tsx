@@ -17,8 +17,8 @@ export default function MeetYourCoaches() {
       <div className="container px-5 py-24 mx-auto">
         {/* Section Header */}
         <SectionHeader
-          title={"MEET YOUR COACHES"}
-          description={"Expert Guidance to Empower You"}
+          // title={"KATH AND JAX"}
+          description={"Meet your Coaches"}
         />
         {/* Coach Cards */}
         <div className="flex flex-wrap -m-4">

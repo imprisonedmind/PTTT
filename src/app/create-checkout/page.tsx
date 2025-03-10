@@ -63,7 +63,7 @@ export default function CreateCheckoutPage() {
         body: JSON.stringify({
           ...values,
           amount: "250.00",
-          item_name: "Course + Network Subscription",
+          item_name: "R250 Subscription",
         }),
       });
 
