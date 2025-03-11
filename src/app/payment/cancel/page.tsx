@@ -22,7 +22,7 @@ export default function CancelPaymentPage() {
         </CardTitle>
 
         <CardDescription className="text-center text-[#666666]">
-          Your payment of R 250.00 has been cancelled.
+          Your payment of R 290.00 has been cancelled.
         </CardDescription>
       </CardHeader>
 

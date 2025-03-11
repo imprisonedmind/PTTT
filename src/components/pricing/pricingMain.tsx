@@ -33,7 +33,7 @@ export default function PricingMain() {
     // },
     {
       name: "Monthly Subscription",
-      price: "R250",
+      price: "R290",
       period: "",
       popular: true,
       features: [

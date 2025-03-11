@@ -22,14 +22,14 @@ export default function SuccessPaymentPage() {
         </CardTitle>
 
         <CardDescription className="text-center text-[#666666]">
-          Your payment of R 250.00 has been processed successfully.
+          Your payment of R 290.00 has been processed successfully.
         </CardDescription>
       </CardHeader>
 
       <CardContent className="text-[#002B5C]">
         <p className="mb-4">
           Thank you for your payment. You have now joined the Parenting the Teen
-          Tribe network. You will be charged R250 monthly, you can cancel at any
+          Tribe network. You will be charged R290 monthly, you can cancel at any
           time.
         </p>
         <p>You will receive a confirmation email shortly.</p>
