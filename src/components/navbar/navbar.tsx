@@ -27,12 +27,12 @@ export default function Navbar() {
         <NavbarItem title={"Pricing"} href="#pricing" />
       </ul>
 
-      <div className="hidden md:flex flex-row gap-4 min-w-[110px]">
-        {/*<Button variant="secondary">Contact</Button>*/}
-        {/*<Link href={signInUrl} target={"_blank"}>*/}
-        {/*  <Button variant="default">Get Started</Button>*/}
-        {/*</Link>*/}
-      </div>
+      {/*<div className="hidden md:flex flex-row gap-4 min-w-[110px]">*/}
+      {/*<Button variant="secondary">Contact</Button>*/}
+      {/*<Link href={signInUrl} target={"_blank"}>*/}
+      {/*  <Button variant="default">Get Started</Button>*/}
+      {/*</Link>*/}
+      {/*</div>*/}
 
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
