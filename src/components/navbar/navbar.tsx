@@ -11,7 +11,6 @@ import {
 import { NavbarItem } from "@/components/navbar/navbarItem";
 import { LogoCircle } from "@/components/reusable/LogoCircle";
 import Link from "next/link";
-import { signInUrl } from "@/lib/utils";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -30,9 +29,9 @@ export default function Navbar() {
 
       <div className="hidden md:flex flex-row gap-4 min-w-[110px]">
         {/*<Button variant="secondary">Contact</Button>*/}
-        <Link href={signInUrl} target={"_blank"}>
-          <Button variant="default">Get Started</Button>
-        </Link>
+        {/*<Link href={signInUrl} target={"_blank"}>*/}
+        {/*  <Button variant="default">Get Started</Button>*/}
+        {/*</Link>*/}
       </div>
 
       <Sheet open={open} onOpenChange={setOpen}>
@@ -74,15 +73,15 @@ export default function Navbar() {
             {/*>*/}
             {/*  Contact*/}
             {/*</Button>*/}
-            <Link href={signInUrl} target="_blank">
-              <Button
-                variant="default"
-                className="w-full"
-                onClick={() => setOpen(false)}
-              >
-                Get Started
-              </Button>
-            </Link>
+            {/*<Link href={signInUrl} target="_blank">*/}
+            {/*  <Button*/}
+            {/*    variant="default"*/}
+            {/*    className="w-full"*/}
+            {/*    onClick={() => setOpen(false)}*/}
+            {/*  >*/}
+            {/*    Get Started*/}
+            {/*  </Button>*/}
+            {/*</Link>*/}
           </div>
         </SheetContent>
       </Sheet>

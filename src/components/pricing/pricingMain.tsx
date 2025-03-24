@@ -38,9 +38,9 @@ export default function PricingMain() {
       popular: true,
       features: [
         "Bi-monthly modules",
-        "TTT midweek chat",
+        "Regular unplugged follow up sessions",
         "Resource sharing",
-        "Engaging discussions",
+        "Polls and Questions",
       ],
     },
   ];
