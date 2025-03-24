@@ -33,7 +33,7 @@ export default function PricingMain() {
     // },
     {
       name: "Monthly Subscription",
-      price: "R250",
+      price: "R290",
       period: "",
       popular: true,
       features: [
@@ -94,14 +94,13 @@ export default function PricingMain() {
               <CardFooter className="mt-auto">
                 <Link href={paymentURl} className={"w-full"}>
                   <Button className="w-full bg-[#7FB3B1] hover:bg-[#7FB3B1]/90">
-                    Choose plan
+                    Buy now
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
               </CardFooter>
             </Card>
           ))}
-          <p className={"mx-auto italic text-sm"}>Cancel at any time</p>
         </div>
       </div>
     </MainWrapper>

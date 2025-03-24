@@ -3,10 +3,7 @@
 import type React from "react";
 
 import { Calendar, Heart, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { MainWrapper } from "@/components/wrapper/mainWrapper";
-import Link from "next/link";
-import { networkUrl } from "@/lib/utils";
 
 export default function Features() {
   return (
@@ -25,14 +22,14 @@ export default function Features() {
           <FeatureCard
             icon={<Heart className="w-10 h-10 sm:w-16 sm:h-16" />}
             title="Why Parenting The Teen Tribe?"
-            description="Our aim is to hold each other in the process of exploring a range of parenting styles, coaching techniques and practical tools to engage and communicate with our Tweens and Teens to build stronger connections and to show up more frequently as the parents we want to be."
+            description="Our aim is to hold space for each other in the process of exploring a range of parenting styles, coaching techniques and practical tools to engage and communicate with our Tweens and Teens to build stronger connections and to show up more frequently as the parents we want to be."
             reverse={false}
           />
 
           <FeatureCard
             icon={<Star className="w-10 h-10 sm:w-16 sm:h-16" />}
             title="The Results You'll Get"
-            description="Our course and community are pretty special. We're focused on ways of making a significant difference in your and your family's dynamics. Connect with other parents, learn from qualified coaches, gain new parenting strategies, and strengthen family relationships."
+            description="Our community and bi-monthly modules are pretty special. We're focused on ways of making a significant difference in your and your family's dynamics. Connect with other parents, learn from qualified coaches, gain new parenting strategies, and strengthen family relationships."
             reverse={true}
           />
 
@@ -43,16 +40,16 @@ export default function Features() {
             reverse={false}
           />
 
-          <div className="flex justify-center mt-20">
-            <Link href={networkUrl} target={"_blank"}>
-              <Button
-                size="lg"
-                className="text-white bg-primary hover:bg-primary/90"
-              >
-                Sign up to be part of this supportive community
-              </Button>
-            </Link>
-          </div>
+          {/*<div className="flex justify-center mt-20">*/}
+          {/*  <Link href={networkUrl} target={"_blank"}>*/}
+          {/*    <Button*/}
+          {/*      size="lg"*/}
+          {/*      className="text-white bg-primary hover:bg-primary/90"*/}
+          {/*    >*/}
+          {/*      Sign up to be part of this supportive community*/}
+          {/*    </Button>*/}
+          {/*  </Link>*/}
+          {/*</div>*/}
         </div>
       </div>
     </MainWrapper>

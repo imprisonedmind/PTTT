@@ -22,7 +22,7 @@ export default function FailedPaymentPage() {
         </CardTitle>
 
         <CardDescription className="text-center text-[#666666]">
-          We were unable to process your payment of R 250.00.
+          We were unable to process your payment of R 290.00.
         </CardDescription>
       </CardHeader>
 

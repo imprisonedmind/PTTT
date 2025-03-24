@@ -62,8 +62,8 @@ export default function CreateCheckoutPage() {
         },
         body: JSON.stringify({
           ...values,
-          amount: "250.00",
-          item_name: "Course + Network Subscription",
+          amount: "290.00",
+          item_name: "R290 Subscription",
         }),
       });
 
@@ -173,7 +173,7 @@ export default function CreateCheckoutPage() {
               <span className="font-semibold text-[#002B5C]">
                 Monthly Subscription:
               </span>
-              <span className="font-bold text-[#002B5C]">R 250.00</span>
+              <span className="font-bold text-[#002B5C]">R 290.00</span>
             </div>
             {/*<div className="flex justify-between items-center border-t border-[#E5E5E5] pt-2 mt-2">*/}
             {/*  <span className="font-semibold text-[#002B5C]">*/}
